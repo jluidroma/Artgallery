@@ -1,0 +1,12 @@
+
+
+<h1>Lista de Artistas</h1>
+<ul>
+    {% for artist in object_list %}
+    <li>
+        <a href="{% url 'artist_detail' artist.pk %}">{{ artist.name }}</a>
+    </li>
+    {% endfor %}
+</ul>
+<a href="{% url 'artist_create' %}">Agregar Nuevo Artista</a>
+
